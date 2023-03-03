@@ -22,7 +22,7 @@ namespace H5ServerSideProgrammering
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // This method gets called by the runtime. Use this method to add services to the container..
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddDbContext<H5DbContext>(x => x.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = h5"));
