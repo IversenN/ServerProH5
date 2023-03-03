@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="jumbotron">
+    <form method="post">
+        <div class="form-group">
+            <label for="title">Titel</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Indtast titel" value="@ViewBag.todo.Title"/>
+        </div>
+        <div class="form-group">
+            <label for="description">Beskrivelse</label>
+            <input type="box" class="form-control" id="description" name="description" placeholder="Indtast Beskrivelse" value="@ViewBag.todo.Description"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        @ViewBag.Message
+    </form>
+    @foreach (H5ServerSideProgrammering.Models.DB.TodoItem todo in @ViewBag.todos)
+    {
+        <h2>@Html.DisplayFor(x => todo.Title)</h2>
+        <p>@Html.DisplayFor(x => todo.Added)</p>
+        <p>@Html.DisplayFor(x => todo.Description)</p>
+        <a href="/Home/RegisterTodo/edit/@todo.Id">Rediger</a>
+        <a href="/Home/RegisterTodo/delete/@todo.Id">Slet</a>
+    }
+</div>

@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Velkommen</h1>
+    <p>VI HOLDER DIN DATA SIKKER!</p>
+
+</div>
+<div class="jumbotron">
+    <form method="post">
+        <div class="form-group">
+            <label for="username">Brugernavn</label>
+            <input type="text" class="form-control" id="username" name="Username" placeholder="Indtast Brugernavn" value="@ViewBag.username"/>
+        </div>
+        <div class="form-group">
+            <label for="password">Adgangskode</label>
+            <input type="password" class="form-control" id="password" name="Password" placeholder="Indtast Adgangskode"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a asp-area="" asp-controller="Home" asp-action="Register">Register</a>
+        @ViewBag.Message
+    </form>
+</div>

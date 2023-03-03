@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="jumbotron">
+    <form method="post">
+        @ViewBag.Message
+        <div class="form-group">
+            <label for="username">Brugernavn</label>
+            <input type="text" class="form-control" id="username" name="Username" placeholder="Brugernavn"/>
+        </div>
+        <div class="form-group">
+            <label for="password">Adgangskode</label>
+            <input type="password" class="form-control" id="password" name="Password" placeholder="Adgnagskode"/>
+        </div>
+        <div class="form-group">
+            <label for="repeatPass">Gentag Adgangskode</label>
+            <input type="password" class="form-control" id="repeatPass" name="repeatPass" placeholder="Gentag-Adgangskode"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
